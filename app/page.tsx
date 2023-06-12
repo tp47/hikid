@@ -1,113 +1,125 @@
-import Image from 'next/image'
+import Link from "next/link";
+
+import WatchBlock from "./components/WatchBlock";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+    <main className="flex min-h-screen flex-col items-center justify-start">
+      <header className="fixed top-0 z-10 w-full backdrop-blur-lg">
+        <nav className="flex flex-row justify-between h-24 items-center text-black  w-[1280px] mx-auto">
+          <div>
+            <Link href="/" className="text-3xl">
+              <span>Hi</span>
+              <span className="font-bold">Kid</span>
+            </Link>
+          </div>
+          <div className="">
+            <ul className="flex flex-row justify-end gap-20">
+              <li>
+                <a href="#main">Главная</a>
+              </li>
+              <li>
+                <a href="#about">О нас</a>
+              </li>
+              <li>
+                <a href="#products">Наши продукты</a>
+              </li>
+              <li>
+                <a href="#contacts">Связь с нами</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <section className="h-[1000px] bg-[url('/figures.jpg')] w-full bg-no-repeat bg-cover pt-24">
+        <div className="h-full w-full flex flex-col justify-center items-center gap-8">
+          <div className="flex flex-col justify-center items-center gap-4">
+            <h2 className="text-7xl">HiKid</h2>
+            <span className="text-gray-700">Важно быть рядом</span>
+          </div>
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#about"
+            className="w-60 h-12 block bg-gradient-to-br from-yellow-100 to-pink-300 text-black rounded-full text-center pt-2"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            Узнать больше
           </a>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      <section
+        id="about"
+        className="w-[1280px] flex flex-row justify-between items-center my-20"
+      >
+        <div className="">
+          <img src="/family.jpg" alt="Семья" />
+        </div>
+        <div className="basis-1/2 grow-0 shrink-0">
+          <h2 className="text-[#e5b1b6] text-5xl mb-4">
+            Безопасность - главное
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p>
+            Детская безопасность – важнейшая часть воспитания ребенка. Однако не
+            каждый родитель задумывается о психологической безопасности и
+            комфорте ребёнка. Часто родители даже не подозревают о проблемах и
+            переживаниях своих детей: отношения в школе, с друзьями,
+            времяпровождение.
           </p>
-        </a>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+      <section
+        id="about"
+        className="w-[1280px] flex flex-row justify-between items-center my-20"
+      >
+        <div className="">
+          <h2 className="text-[#e5b1b6] text-5xl mb-4">Что такое HiKid</h2>
+          <p>
+            Умные часы HiKid разработаны именно для того, чтобы  вовремя
+            выявлять подобные проблемы, помочь  ребёнку справиться с ними и
+            привлечь внимание родителей.   
           </p>
-        </a>
+        </div>
+        <div className="basis-1/2 grow-0 shrink-0">
+          <p>
+            Уникальной особенностью HiKid, является встроенный персонаж на
+            основе нейросети ChatGPT, который сможет общаться с ребёнком,
+            интересоваться его настроением, психическом состоянии и даже дать
+            совет.  В свою очередь при выявлении серьезных проблем, информация о
+            них будет отображена в приложении, установленном на смартфонах
+            родителей.
+          </p>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+      <WatchBlock />
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className="h-[800px] w-[1280px] bg-[url(/gradient.jpg)]">
+        <div className="flex flex-col justify-between items-center w-full h-full">
+          <h2 className="text-[#e5b1b6] text-5xl mb-4 mt-10">Возможности HiKid</h2>
+        </div>
+      </section>
+
+      <section className="h-[593px] w-[1280px] bg-[url(/map.png)]">
+        <div className="flex flex-col justify-between items-center w-full h-full">
+          <h2 className="text-white text-5xl mb-4 mt-10">Связь с нами</h2>
+          <div className="w-[500px] flex flex-col gap-6 justify-start mb-20">
+            <div className="w-full">
+              <input className="w-full p-3 rounded-xl" type="text" placeholder="Email" />
+            </div>
+            <div className="flex flex-row justify-center items-center gap-8">
+              <input className="w-full p-3 rounded-xl" type="text" placeholder="Компания" />
+              <input className="w-full p-3 rounded-xl" type="text" placeholder="Подразделение" />
+            </div>
+            <div>
+              <textarea rows="5" className="w-full p-3 rounded-xl" placeholder="Сообщение"></textarea>
+            </div>
+            <div className="flex flex-row justify-center">
+              <button className="p-4 block rounded-full bg-[#b4c8c5] hover:bg-green-200">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
