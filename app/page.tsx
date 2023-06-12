@@ -112,7 +112,7 @@ export default function Home() {
               <input className="w-full p-3 rounded-xl" type="text" placeholder="Подразделение" />
             </div>
             <div>
-              <textarea rows="5" className="w-full p-3 rounded-xl" placeholder="Сообщение"></textarea>
+              <textarea rows={5} className="w-full p-3 rounded-xl" placeholder="Сообщение"></textarea>
             </div>
             <div className="flex flex-row justify-center">
               <button className="p-4 block rounded-full bg-[#b4c8c5] hover:bg-green-200">Отправить</button>
