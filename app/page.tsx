@@ -69,7 +69,6 @@ export default function Home() {
       </section>
 
       <section
-        id="about"
         className="w-[1280px] flex flex-row justify-between items-center my-20"
       >
         <div className="">
@@ -100,7 +99,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="h-[593px] w-[1280px] bg-[url(/map.png)]">
+      <section id="contacts" className="h-[593px] w-[1280px] bg-[url(/map.png)]">
         <div className="flex flex-col justify-between items-center w-full h-full">
           <h2 className="text-white text-5xl mb-4 mt-10">Связь с нами</h2>
           <div className="w-[500px] flex flex-col gap-6 justify-start mb-20">

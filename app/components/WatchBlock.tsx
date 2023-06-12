@@ -11,9 +11,11 @@ export default function WatchBlock() {
   return (
     <section className="h-[800px] w-[1280px] bg-cover" style={{
       backgroundImage: `url('/${selectedWatch.image}')`
-      }}>
+      }}
+      id="products"
+    >
       <div className="flex flex-col justify-between items-center w-full h-full">
-        <h2 className="text-[#e5b1b6] text-5xl mb-4 mt-10">Наш продукт</h2>
+        <h2 className="text-[#e5b1b6] text-5xl mb-4 mt-32">Наш продукт</h2>
         <div></div>
         <div className="mb-32 flex flex-row gap-12 pl-24">
           <button
