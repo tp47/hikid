@@ -105,9 +105,9 @@ export default function Home() {
             Возможности HiKid
           </h2>
 
-          <div className="flex flex-row mt-36">
-            <div className="w-1/3 grow-0 shrink-0">
-              <h3 className="text-[#e5b1b6] text-3xl">HiKid для детей</h3>
+          <div className="flex flex-row mt-36 gap-12 p-4">
+            <div className="w-1/5 grow-0 shrink-0">
+              <h3 className="text-[#e5b1b6] text-2xl">HiKid для детей</h3>
               <ul>
                 <li>Голосовой помощник с родительским контролем</li>
                 <li>Голосовой «личный дневник»</li>
@@ -116,10 +116,15 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="w-1/3 grow-0 shrink-0"></div>
+            <div className="w-2/4 grow-0 shrink-0">
+              <video width="720" controls>
+                <source src="/presentation.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео
+              </video>
+            </div>
 
-            <div className="w-1/3 grow-0 shrink-0">
-              <h3 className="text-[#e5b1b6] text-3xl">HiKid для родителей</h3>
+            <div className="grow-0">
+              <h3 className="text-[#e5b1b6] text-2xl">HiKid для родителей</h3>
               <ul>
                 <li>
                   Возможность внесения учебного расписания ребёнка во избежание
@@ -134,7 +139,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-
         </div>
       </section>
 
