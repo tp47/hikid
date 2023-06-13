@@ -16,16 +16,24 @@ export default function Home() {
           <div className="">
             <ul className="flex flex-row justify-end gap-20">
               <li>
-                <a href="#main">Главная</a>
+                <a href="#main" className="hover:underline">
+                  Главная
+                </a>
               </li>
               <li>
-                <a href="#about">О нас</a>
+                <a href="#about" className="hover:underline">
+                  О нас
+                </a>
               </li>
               <li>
-                <a href="#products">Наши продукты</a>
+                <a href="#products" className="hover:underline">
+                  Наши продукты
+                </a>
               </li>
               <li>
-                <a href="#contacts">Связь с нами</a>
+                <a href="#contacts" className="hover:underline">
+                  Связь с нами
+                </a>
               </li>
             </ul>
           </div>
@@ -68,9 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className="w-[1280px] flex flex-row justify-between items-center my-20"
-      >
+      <section className="w-[1280px] flex flex-row justify-between items-center my-20 gap-8">
         <div className="">
           <h2 className="text-[#e5b1b6] text-5xl mb-4">Что такое HiKid</h2>
           <p>
@@ -79,7 +85,7 @@ export default function Home() {
             привлечь внимание родителей.   
           </p>
         </div>
-        <div className="basis-1/2 grow-0 shrink-0">
+        <div className="basis-1/2 grow-0 shrink-0 ml-8">
           <p>
             Уникальной особенностью HiKid, является встроенный персонаж на
             основе нейросети ChatGPT, который сможет общаться с ребёнком,
@@ -94,27 +100,81 @@ export default function Home() {
       <WatchBlock />
 
       <section className="h-[800px] w-[1280px] bg-[url(/gradient.jpg)]">
-        <div className="flex flex-col justify-between items-center w-full h-full">
-          <h2 className="text-[#e5b1b6] text-5xl mb-4 mt-10">Возможности HiKid</h2>
+        <div className="flex flex-col justify-start items-center w-full h-full">
+          <h2 className="text-[#e5b1b6] text-5xl mb-4 mt-10">
+            Возможности HiKid
+          </h2>
+
+          <div className="flex flex-row mt-36">
+            <div className="w-1/3 grow-0 shrink-0">
+              <h3 className="text-[#e5b1b6] text-3xl">HiKid для детей</h3>
+              <ul>
+                <li>Голосовой помощник с родительским контролем</li>
+                <li>Голосовой «личный дневник»</li>
+                <li>Голосовой GPS-навигатор</li>
+                <li>Планировщик дня</li>
+              </ul>
+            </div>
+
+            <div className="w-1/3 grow-0 shrink-0"></div>
+
+            <div className="w-1/3 grow-0 shrink-0">
+              <h3 className="text-[#e5b1b6] text-3xl">HiKid для родителей</h3>
+              <ul>
+                <li>
+                  Возможность внесения учебного расписания ребёнка во избежание
+                  отвлечения от уроков
+                </li>
+                <li>Построение маршрутов и опасных/безопасных зон</li>
+                <li>Возможность узнать о проблемах и переживаниях ребёнка</li>
+                <li>
+                  Уведомления о словах-триггерах, выключении звука и снятии
+                  браслета, нарушении маршрута
+                </li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <section id="contacts" className="h-[593px] w-[1280px] bg-[url(/map.png)]">
+      <section
+        id="contacts"
+        className="h-[593px] w-[1280px] bg-[url(/map.jpg)]"
+      >
         <div className="flex flex-col justify-between items-center w-full h-full">
-          <h2 className="text-white text-5xl mb-4 mt-10">Связь с нами</h2>
+          <h2 className="text-[#e5b1b6] text-5xl mb-4 mt-10">Связь с нами</h2>
           <div className="w-[500px] flex flex-col gap-6 justify-start mb-20">
             <div className="w-full">
-              <input className="w-full p-3 rounded-xl" type="text" placeholder="Email" />
+              <input
+                className="w-full p-3 rounded-xl"
+                type="text"
+                placeholder="Email"
+              />
             </div>
             <div className="flex flex-row justify-center items-center gap-8">
-              <input className="w-full p-3 rounded-xl" type="text" placeholder="Компания" />
-              <input className="w-full p-3 rounded-xl" type="text" placeholder="Подразделение" />
+              <input
+                className="w-full p-3 rounded-xl"
+                type="text"
+                placeholder="Компания"
+              />
+              <input
+                className="w-full p-3 rounded-xl"
+                type="text"
+                placeholder="Подразделение"
+              />
             </div>
             <div>
-              <textarea rows={5} className="w-full p-3 rounded-xl" placeholder="Сообщение"></textarea>
+              <textarea
+                rows={5}
+                className="w-full p-3 rounded-xl"
+                placeholder="Сообщение"
+              ></textarea>
             </div>
             <div className="flex flex-row justify-center">
-              <button className="p-4 block rounded-full bg-[#b4c8c5] hover:bg-green-200">Отправить</button>
+              <button className="p-4 block rounded-full bg-[#b4c8c5] hover:bg-green-200">
+                Отправить
+              </button>
             </div>
           </div>
         </div>
